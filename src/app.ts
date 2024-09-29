@@ -10,7 +10,7 @@ fastify.get("/", (req: FastifyRequest, repl: FastifyReply) => {
 
 const start = async () => {
   try {
-    await fastify.listen({ port: 3000 });
+    await fastify.listen({ host: "0.0.0.0", port: 3000 });
   } catch (error: unknown) {
     fastify.log.error(error);
   }
